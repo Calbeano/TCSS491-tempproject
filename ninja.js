@@ -97,8 +97,14 @@ class Ninja {
 			this.velocity.x += 0.5;
 		}
 		
+		// attacks
+		if (this.game.x) {
+			this.state = 3;
+			this.velocity.x = 0;
+		}
+		
 		// attacks left
-		if (this.game.left && !this.game.right && this.game.x) {
+		/*if (this.game.left && !this.game.right && this.game.x) {
 			this.state = 3;
 			this.facing = 1;
 			this.velocity.x = 0;
@@ -109,7 +115,7 @@ class Ninja {
 			this.state = 3;
 			this.facing = 0;
 			this.velocity.x = 0;
-		}
+		}*/
 		
 		// jumping
 		if (this.game.space && this.jumping == false) {
